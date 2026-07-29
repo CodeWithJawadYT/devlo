@@ -1,0 +1,2757 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <title>PB08 BLENDZ — Cyber-Luxury Barber Atelier · Brampton, ON</title>
+    <link rel="shortcut icon" href="pb08-logo.jpg" type="image/x-icon">
+    <meta
+      name="description"
+      content="PB08 BLENDZ — Est. 2025. Cyber-luxury barber atelier in Brampton, Ontario. Precision cuts, beard architecture, detan, scrub, head massage & elite membership."
+    />
+    <meta name="theme-color" content="#0A0A0A" />
+    <meta
+      property="og:title"
+      content="PB08 BLENDZ — Cyber-Luxury Barber Atelier"
+    />
+    <meta
+      property="og:description"
+      content="Precision cuts. Beard architecture. Membership club. Book your chair at 4 Lisa Street, Brampton."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/pb08-logo.jpg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#0A0A0A",
+              ink2: "#111113",
+              chrome: "#C9CED6",
+              crimson: "#FF003C",
+              crimsonSoft: "#ff2b5e",
+            },
+            fontFamily: {
+              display: ['"Orbitron"', "ui-sans-serif", "system-ui"],
+              serif: ['"Cormorant Garamond"', "ui-serif", "Georgia"],
+              mono: ['"JetBrains Mono"', "ui-monospace", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --ink: #0a0a0a;
+        --ink2: #111113;
+        --chrome: #c9ced6;
+        --crimson: #ff003c;
+        --chrome-grad: linear-gradient(
+          180deg,
+          #f6f7f9 0%,
+          #c9ced6 35%,
+          #7d848c 60%,
+          #eef1f4 100%
+        );
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        background: var(--ink);
+        color: #e9ebee;
+        max-width: 100vw;
+        overflow-x: hidden;
+      }
+      body {
+        font-family: "Cormorant Garamond", ui-serif, Georgia, serif;
+        -webkit-font-smoothing: antialiased;
+        background:
+          radial-gradient(
+            1200px 700px at 80% -10%,
+            rgba(255, 0, 60, 0.1),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 600px at -10% 30%,
+            rgba(120, 140, 180, 0.08),
+            transparent 60%
+          ),
+          #0a0a0a;
+        overflow-x: hidden;
+      }
+      .font-display {
+        font-family: "Orbitron", ui-sans-serif, system-ui;
+        letter-spacing: 0.06em;
+      }
+      .font-mono {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+      }
+
+      /* Chrome text */
+      .chrome-text {
+        background: var(--chrome-grad);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.15));
+      }
+      .crimson-glow {
+        color: #fff;
+        text-shadow:
+          0 0 8px rgba(255, 0, 60, 0.55),
+          0 0 22px rgba(255, 0, 60, 0.35);
+      }
+      .neon-border {
+        box-shadow:
+          inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+          0 0 0 1px rgba(255, 0, 60, 0.35),
+          0 0 24px rgba(255, 0, 60, 0.25);
+      }
+      .hairline {
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .glass {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.04),
+          rgba(255, 255, 255, 0.015)
+        );
+        backdrop-filter: blur(14px) saturate(120%);
+        -webkit-backdrop-filter: blur(14px) saturate(120%);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .grid-bg {
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+          linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.045) 1px,
+            transparent 1px
+          );
+        background-size: 44px 44px;
+        mask-image: radial-gradient(
+          ellipse at center,
+          black 40%,
+          transparent 75%
+        );
+      }
+      .scanline::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: repeating-linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.03) 0 1px,
+          transparent 1px 3px
+        );
+        mix-blend-mode: overlay;
+      }
+      .noise::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.06;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.9'/></svg>");
+      }
+      .marquee {
+        display: flex;
+        gap: 3rem;
+        animation: marq 30s linear infinite;
+      }
+      @keyframes marq {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      .view {
+        display: none;
+      }
+      .view.active {
+        display: block;
+        animation: enter 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+      }
+      @keyframes enter {
+        0% {
+          opacity: 0;
+          transform: perspective(1400px) rotateX(6deg) translateZ(-160px)
+            translateY(30px);
+          filter: blur(8px);
+        }
+        60% {
+          filter: blur(0);
+        }
+        100% {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      .clip-sweep {
+        animation: sweep 0.9s cubic-bezier(0.7, 0.1, 0.2, 1) both;
+      }
+      @keyframes sweep {
+        0% {
+          clip-path: inset(0 100% 0 0);
+        }
+        100% {
+          clip-path: inset(0 0 0 0);
+        }
+      }
+      @keyframes shake {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-4px);
+        }
+        75% {
+          transform: translateX(4px);
+        }
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+
+      .btn-crimson {
+        background: linear-gradient(180deg, #ff2b5e, #c8002f);
+        color: #fff;
+        letter-spacing: 0.14em;
+        box-shadow:
+          0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+          0 10px 30px -8px rgba(255, 0, 60, 0.6),
+          0 0 40px rgba(255, 0, 60, 0.25);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.3s ease,
+          filter 0.3s ease;
+      }
+      .btn-crimson:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.08);
+        box-shadow:
+          0 14px 40px -10px rgba(255, 0, 60, 0.8),
+          0 0 60px rgba(255, 0, 60, 0.35);
+      }
+      .btn-ghost {
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        color: #e9ebee;
+        letter-spacing: 0.14em;
+        transition: all 0.3s ease;
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .btn-ghost:hover {
+        border-color: #ff003c;
+        color: #fff;
+        box-shadow:
+          0 0 0 1px rgba(255, 0, 60, 0.4),
+          0 0 24px rgba(255, 0, 60, 0.25);
+      }
+
+      .chip {
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.03);
+        transition: all 0.2s ease;
+      }
+      .chip:hover {
+        border-color: #ff003c;
+        color: #fff;
+      }
+      .chip.active {
+        background: linear-gradient(180deg, #ff2b5e, #c8002f);
+        border-color: transparent;
+        color: #fff;
+        box-shadow: 0 8px 24px -8px rgba(255, 0, 60, 0.7);
+      }
+      .chip.disabled {
+        opacity: 0.3;
+        pointer-events: none;
+        text-decoration: line-through;
+      }
+
+      .card-hover {
+        transition:
+          transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1),
+          box-shadow 0.5s;
+      }
+      .card-hover:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 30px 60px -20px rgba(255, 0, 60, 0.25);
+      }
+
+      .kbd {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 10px;
+        padding: 2px 6px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 6px;
+        color: #c9ced6;
+      }
+
+      .step-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 99px;
+        background: #333;
+        transition: all 0.3s;
+      }
+      .step-dot.on {
+        background: #ff003c;
+        box-shadow: 0 0 12px #ff003c;
+      }
+
+      /* Header logo shrink */
+      #brandLogo {
+        transition: all 0.4s ease;
+      }
+      .shrunk #brandLogo {
+        transform: scale(0.72);
+      }
+      .shrunk header#topbar {
+        background: rgba(10, 10, 10, 0.72);
+        backdrop-filter: blur(14px);
+      }
+
+      /* Magnetic wrapper hint */
+      .magnet {
+        transition: transform 0.15s ease-out;
+      }
+
+      /* Scramble */
+      .scramble {
+        font-variant-numeric: tabular-nums;
+      }
+
+      input,
+      textarea,
+      select {
+        background: transparent;
+        color: #e9ebee;
+      }
+      input:focus,
+      textarea:focus,
+      select:focus {
+        outline: none;
+        border-color: #ff003c;
+        box-shadow: 0 0 0 3px rgba(255, 0, 60, 0.18);
+      }
+      input::placeholder,
+      textarea::placeholder {
+        color: rgba(255, 255, 255, 0.35);
+      }
+      select option {
+        background: #111113;
+        color: #e9ebee;
+      }
+
+      /* Time slot */
+      .slot {
+        transition: all 0.2s ease;
+      }
+      .slot:hover {
+        border-color: #ff003c;
+        color: #fff;
+      }
+      .slot.on {
+        background: #ff003c;
+        color: #fff;
+        border-color: #ff003c;
+        box-shadow: 0 8px 22px -8px rgba(255, 0, 60, 0.7);
+      }
+      .slot.off {
+        opacity: 0.35;
+        pointer-events: none;
+      }
+
+      /* Day chip */
+      .daychip {
+        transition: all 0.2s ease;
+      }
+      .daychip:not(.off):hover .daycircle {
+        border-color: #ff003c;
+        color: #fff;
+      }
+      .daychip.off {
+        opacity: 0.3;
+        pointer-events: none;
+      }
+      .daychip.today .daycircle {
+        box-shadow: 0 0 0 2px rgba(255, 0, 60, 0.4);
+      }
+
+      /* radial map */
+      .cyber-map {
+        background:
+          radial-gradient(
+            circle at 50% 50%,
+            rgba(255, 0, 60, 0.15),
+            transparent 55%
+          ),
+          conic-gradient(
+            from 0deg,
+            rgba(255, 0, 60, 0.25),
+            transparent 30%,
+            rgba(201, 206, 214, 0.15),
+            transparent 60%,
+            rgba(255, 0, 60, 0.25)
+          );
+        filter: blur(0.2px);
+      }
+      .cyber-map::before,
+      .cyber-map::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 9999px;
+        border: 1px dashed rgba(255, 255, 255, 0.12);
+        animation: spin 22s linear infinite;
+      }
+      .cyber-map::after {
+        inset: 12%;
+        border-color: rgba(255, 0, 60, 0.35);
+        animation-duration: 14s;
+        animation-direction: reverse;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* scroll-driven pulse */
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.6;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+      .live-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 99px;
+        background: #00ff88;
+        box-shadow: 0 0 10px #00ff88;
+        animation: pulse 1.6s infinite;
+      }
+
+      /* responsive nav drawer */
+      .drawer {
+        transform: translateX(100%);
+        transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+      .drawer.open {
+        transform: translateX(0);
+      }
+      .drawer-backdrop {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.4s ease;
+      }
+      .drawer-backdrop.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .drawer nav a {
+        opacity: 0;
+        transform: translateX(24px);
+        transition: all 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+      .drawer.open nav a {
+        opacity: 1;
+        transform: none;
+      }
+      .drawer.open nav a:nth-child(1) {
+        transition-delay: 0.08s;
+      }
+      .drawer.open nav a:nth-child(2) {
+        transition-delay: 0.14s;
+      }
+      .drawer.open nav a:nth-child(3) {
+        transition-delay: 0.2s;
+      }
+      .drawer.open nav a:nth-child(4) {
+        transition-delay: 0.26s;
+      }
+      .drawer.open nav a:nth-child(5) {
+        transition-delay: 0.32s;
+      }
+      .drawer.open nav a:nth-child(6) {
+        transition-delay: 0.38s;
+      }
+
+      /* animated hamburger */
+      .burger-lines {
+        position: relative;
+        width: 18px;
+        height: 14px;
+      }
+      .burger-lines span {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #fff;
+        transition: all 0.35s cubic-bezier(0.7, 0.1, 0.2, 1);
+      }
+      .burger-lines span:nth-child(1) {
+        top: 0;
+      }
+      .burger-lines span:nth-child(2) {
+        top: 6px;
+      }
+      .burger-lines span:nth-child(3) {
+        top: 12px;
+      }
+      #burger.is-open .burger-lines span:nth-child(1) {
+        top: 6px;
+        transform: rotate(45deg);
+      }
+      #burger.is-open .burger-lines span:nth-child(2) {
+        opacity: 0;
+      }
+      #burger.is-open .burger-lines span:nth-child(3) {
+        top: 6px;
+        transform: rotate(-45deg);
+      }
+
+      /* horizontal-scroll safety */
+      #app {
+        max-width: 100vw;
+        overflow-x: hidden;
+      }
+      #dayRow {
+        max-width: 100%;
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
+      }
+      #dayRow::-webkit-scrollbar {
+        height: 4px;
+      }
+      #dayRow::-webkit-scrollbar-thumb {
+        background: rgba(255, 0, 60, 0.4);
+        border-radius: 99px;
+      }
+
+      /* ---------- Fluid, mobile-first type & layout polish ---------- */
+      .hero-title {
+        font-size: clamp(2.6rem, 11vw, 9rem);
+      }
+      @media (max-width: 380px) {
+        .hero-title {
+          font-size: clamp(2.2rem, 13vw, 3.2rem);
+        }
+      }
+      @media (max-width: 420px) {
+        .marquee {
+          animation-duration: 20s;
+        }
+      }
+      /* Prevent tap-highlight flash on iOS */
+      button,
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+      /* Comfortable tap targets on touch */
+      @media (pointer: coarse) {
+        button,
+        .nav-link,
+        .daychip,
+        .slot {
+          min-height: 44px;
+        }
+      }
+
+      /* ---------- Mobile responsive fixes ---------- */
+      @media (max-width: 768px) {
+        .lg\:grid-cols-\[1fr_380px\] {
+          grid-template-columns: 1fr !important;
+        }
+        .booking-grid {
+          grid-template-columns: 1fr !important;
+        }
+        .booking-aside {
+          position: static !important;
+          max-width: 100% !important;
+        }
+        #slotGrid {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
+        .stat-grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+          gap: 0.75rem !important;
+        }
+        .stat-grid > div {
+          padding: 1rem !important;
+        }
+        .stat-grid .font-display {
+          font-size: 1.75rem !important;
+        }
+        .hero-title {
+          line-height: 0.88;
+        }
+        .menu-grid {
+          grid-template-columns: 1fr !important;
+        }
+        .crew-grid {
+          max-width: 100% !important;
+        }
+        .hours-grid {
+          grid-template-columns: repeat(7, 1fr) !important;
+          gap: 2px !important;
+        }
+        .hours-grid > div {
+          padding: 0.25rem 0.1rem !important;
+        }
+        .hours-grid > div > div:last-child {
+          font-size: 8px !important;
+        }
+      }
+      @media (max-width: 480px) {
+        .hero-title {
+          font-size: clamp(2rem, 12vw, 3.5rem);
+        }
+        #slotGrid {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
+        .btn-crimson,
+        .btn-ghost {
+          padding-left: 1.25rem !important;
+          padding-right: 1.25rem !important;
+        }
+      }
+
+      /* Prevent any element from causing horizontal overflow */
+      img,
+      video,
+      svg {
+        max-width: 100%;
+      }
+      pre,
+      code {
+        overflow-x: auto;
+        max-width: 100%;
+      }
+    </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": ["LocalBusiness", "BarberShop", "HealthAndBeautyBusiness"],
+            "@id": "https://pb08blendz.example/#business",
+            "name": "PB08 BLENDZ",
+            "description": "Cyber-luxury barber atelier offering precision haircuts, beard architecture, detan, scrub and head massage. Established 2025.",
+            "image": "/pb08-logo.jpg",
+            "logo": "/pb08-logo.jpg",
+            "foundingDate": "2025",
+            "priceRange": "$$",
+            "telephone": "+1-647-621-4671",
+            "email": "bobbysarai2003@gmail.com",
+            "url": "https://pb08blendz.example/",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "4 Lisa Street",
+              "addressLocality": "Brampton",
+              "addressRegion": "ON",
+              "addressCountry": "CA"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 43.6862,
+              "longitude": -79.7596
+            },
+            "areaServed": [
+              { "@type": "City", "name": "Brampton" },
+              { "@type": "AdministrativeArea", "name": "Peel Region" }
+            ],
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday"
+                ],
+                "opens": "09:00",
+                "closes": "13:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday", "Sunday"],
+                "opens": "09:00",
+                "closes": "20:00"
+              }
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "price": "20",
+                  "priceCurrency": "CAD",
+                  "itemOffered": { "@type": "Service", "name": "Hair Cut" }
+                },
+                {
+                  "@type": "Offer",
+                  "price": "10",
+                  "priceCurrency": "CAD",
+                  "itemOffered": { "@type": "Service", "name": "Beard" }
+                },
+                {
+                  "@type": "Offer",
+                  "price": "25",
+                  "priceCurrency": "CAD",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Hair Cut & Beard"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "price": "25",
+                  "priceCurrency": "CAD",
+                  "itemOffered": { "@type": "Service", "name": "Detan Scrub" }
+                },
+                {
+                  "@type": "Offer",
+                  "price": "15",
+                  "priceCurrency": "CAD",
+                  "itemOffered": { "@type": "Service", "name": "Detan" }
+                },
+                {
+                  "@type": "Offer",
+                  "price": "15",
+                  "priceCurrency": "CAD",
+                  "itemOffered": { "@type": "Service", "name": "Scrub" }
+                },
+                {
+                  "@type": "Offer",
+                  "price": "15",
+                  "priceCurrency": "CAD",
+                  "itemOffered": { "@type": "Service", "name": "Head Massage" }
+                },
+                {
+                  "@type": "Offer",
+                  "price": "40",
+                  "priceCurrency": "CAD",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Grooming Package",
+                    "description": "Haircut, Beard, Detan & Scrub bundled."
+                  }
+                }
+              ]
+            },
+            "makesOffer": [
+              {
+                "@type": "Offer",
+                "name": "Standard Club Member — 1 Month",
+                "price": "50",
+                "priceCurrency": "CAD"
+              },
+              {
+                "@type": "Offer",
+                "name": "VIP Premium Executive — 2 Months",
+                "price": "100",
+                "priceCurrency": "CAD"
+              }
+            ],
+            "employee": [
+              {
+                "@type": "Person",
+                "name": "Bobby S.",
+                "jobTitle": "Master Barber & Founder"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="min-h-screen relative">
+    <!-- ambient grid -->
+    <div class="pointer-events-none fixed inset-0 grid-bg opacity-40"></div>
+
+    <!-- TOP BAR -->
+    <header id="topbar" class="fixed top-0 left-0 right-0 z-50 transition-all">
+      <div
+        class="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-10 py-3 flex items-center justify-between gap-3"
+      >
+        <a
+          href="#home"
+          data-nav="home"
+          class="flex items-center gap-2 sm:gap-3 group min-w-0"
+        >
+          <img
+            id="brandLogo"
+            src="/pb08-logo.jpg"
+            alt="PB08 BLENDZ crest"
+            class="w-10 h-10 sm:w-12 sm:h-12 rounded-full ring-1 ring-white/10 object-cover shrink-0"
+          />
+          <div class="leading-none min-w-0">
+            <div
+              class="font-display text-[13px] sm:text-[15px] chrome-text font-black truncate"
+            >
+              PB08 BLENDZ
+            </div>
+            <div
+              class="font-mono text-[9px] sm:text-[10px] text-white/40 truncate"
+            >
+              EST · 2025 · BRAMPTON
+            </div>
+          </div>
+        </a>
+        <nav class="hidden lg:flex items-center gap-1 text-[11px] font-display">
+          <a
+            class="nav-link px-4 py-2 rounded-full text-white/70 hover:text-white transition"
+            data-nav="home"
+            >HOME</a
+          >
+          <a
+            class="nav-link px-4 py-2 rounded-full text-white/70 hover:text-white transition"
+            data-nav="menu"
+            >MENU</a
+          >
+          <a
+            class="nav-link px-4 py-2 rounded-full text-white/70 hover:text-white transition"
+            data-nav="pass"
+            >ELITE PASS</a
+          >
+          <a
+            class="nav-link px-4 py-2 rounded-full text-white/70 hover:text-white transition"
+            data-nav="crew"
+            >CRAFT · CREW</a
+          >
+          <a
+            class="nav-link px-4 py-2 rounded-full text-white/70 hover:text-white transition"
+            data-nav="contact"
+            >CONTACT</a
+          >
+        </nav>
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          <div
+            class="hidden md:flex items-center gap-2 font-mono text-[10px] text-white/60"
+          >
+            <span class="live-dot open-status-dot"></span>
+            <span class="open-status-text">OPEN NOW · 9:00 AM – 1:00 PM</span>
+          </div>
+          <button
+            data-nav="book"
+            class="btn-crimson font-display text-[10px] sm:text-[11px] px-3 sm:px-5 py-2 sm:py-2.5 rounded-full whitespace-nowrap"
+          >
+            <span class="hidden sm:inline">BOOK CHAIR →</span
+            ><span class="sm:hidden">BOOK →</span>
+          </button>
+          <button
+            id="burger"
+            aria-label="Open menu"
+            class="lg:hidden w-10 h-10 rounded-full hairline flex items-center justify-center shrink-0"
+          >
+            <span class="burger-lines"
+              ><span></span><span></span><span></span
+            ></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Drawer backdrop -->
+    <div
+      id="drawerBackdrop"
+      class="drawer-backdrop fixed inset-0 z-[55] bg-black/60 backdrop-blur-sm lg:hidden"
+    ></div>
+
+    <!-- Mobile drawer -->
+    <aside
+      id="drawer"
+      class="drawer fixed inset-y-0 right-0 w-[82%] max-w-sm z-[60] bg-ink2 hairline p-8 flex flex-col gap-6"
+    >
+      <div class="flex justify-between items-center">
+        <div class="font-display text-sm chrome-text">MENU</div>
+        <button id="closeDrawer" class="w-9 h-9 rounded-full hairline">
+          ✕
+        </button>
+      </div>
+      <nav class="flex flex-col gap-1 font-display text-lg">
+        <a class="nav-link py-3 border-b border-white/5" data-nav="home"
+          >HOME</a
+        >
+        <a class="nav-link py-3 border-b border-white/5" data-nav="menu"
+          >MENU</a
+        >
+        <a class="nav-link py-3 border-b border-white/5" data-nav="pass"
+          >ELITE PASS</a
+        >
+        <a class="nav-link py-3 border-b border-white/5" data-nav="book"
+          >BOOK</a
+        >
+        <a class="nav-link py-3 border-b border-white/5" data-nav="crew"
+          >CRAFT · CREW</a
+        >
+        <a class="nav-link py-3" data-nav="contact">CONTACT</a>
+      </nav>
+      <div class="mt-auto text-xs text-white/50 font-mono">
+        4 Lisa Street, Brampton ON<br />647-621-4671
+      </div>
+    </aside>
+
+    <main id="app" class="pt-24">
+      <!-- ================= HOME ================= -->
+      <section id="view-home" class="view active">
+        <div class="relative min-h-[92vh] overflow-hidden scanline noise">
+          <!-- kinetic hero -->
+          <div class="absolute inset-0 pointer-events-none">
+            <div
+              class="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full"
+              style="
+                background: radial-gradient(
+                  closest-side,
+                  rgba(255, 0, 60, 0.35),
+                  transparent 70%
+                );
+              "
+            ></div>
+            <div
+              class="absolute -bottom-40 -left-40 w-[700px] h-[700px] rounded-full"
+              style="
+                background: radial-gradient(
+                  closest-side,
+                  rgba(201, 206, 214, 0.12),
+                  transparent 70%
+                );
+              "
+            ></div>
+          </div>
+
+          <div
+            class="max-w-[1400px] mx-auto px-5 md:px-10 pt-10 md:pt-16 relative"
+          >
+            <div
+              class="flex flex-wrap items-center gap-3 font-mono text-[10px] text-white/50"
+            >
+              <span class="chip px-3 py-1 rounded-full"
+                >// SYS.PB08 · v.2030</span
+              >
+              <span class="chip px-3 py-1 rounded-full"
+                >GEO · 43.68°N 79.75°W</span
+              >
+              <span class="chip px-3 py-1 rounded-full"
+                >LIVE · CHAIR 01/01</span
+              >
+            </div>
+
+            <h1
+              class="reveal hero-title mt-8 font-display font-black leading-[.86] break-words"
+            >
+              <span class="chrome-text">CUT.</span>
+              <span class="chrome-text">CODE.</span><br />
+              <span class="crimson-glow">CROWN.</span>
+            </h1>
+
+            <p class="reveal mt-8 max-w-2xl text-xl md:text-2xl text-white/70">
+              A cyber-luxury barber atelier engineered in Brampton. Precision
+              blades, architected beards, elite membership rituals — programmed
+              for the year 2030.
+            </p>
+
+            <div class="reveal mt-10 flex flex-wrap items-center gap-4">
+              <button
+                data-nav="book"
+                class="btn-crimson font-display text-[12px] px-8 py-4 rounded-full"
+              >
+                RESERVE THE CHAIR
+              </button>
+              <button
+                data-nav="menu"
+                class="btn-ghost font-display text-[12px] px-8 py-4 rounded-full"
+              >
+                EXPLORE MENU
+              </button>
+              <div
+                class="hidden sm:flex items-center gap-2 text-white/50 font-mono text-[11px]"
+              >
+                <span class="kbd">B</span> quick book ·
+                <span class="kbd">M</span> menu
+              </div>
+            </div>
+
+            <!-- stat strip -->
+            <div class="reveal mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 stat-grid">
+              <div class="glass rounded-2xl p-5">
+                <div
+                  class="font-display text-3xl chrome-text scramble"
+                  data-scramble="4200+"
+                >
+                  4200+
+                </div>
+                <div class="font-mono text-[10px] text-white/50 mt-1">
+                  CUTS ENGINEERED
+                </div>
+              </div>
+              <div class="glass rounded-2xl p-5">
+                <div
+                  class="font-display text-3xl chrome-text scramble"
+                  data-scramble="01"
+                >
+                  01
+                </div>
+                <div class="font-mono text-[10px] text-white/50 mt-1">
+                  MASTER BARBER
+                </div>
+              </div>
+              <div class="glass rounded-2xl p-5">
+                <div
+                  class="font-display text-3xl chrome-text scramble"
+                  data-scramble="4.9★"
+                >
+                  4.9★
+                </div>
+                <div class="font-mono text-[10px] text-white/50 mt-1">
+                  ATELIER RATING
+                </div>
+              </div>
+              <div class="glass rounded-2xl p-5">
+                <div
+                  class="font-display text-3xl chrome-text scramble"
+                  data-scramble="2025"
+                >
+                  2025
+                </div>
+                <div class="font-mono text-[10px] text-white/50 mt-1">
+                  EST · YEAR ONE
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- marquee -->
+          <div
+            class="mt-20 overflow-hidden border-y border-white/10 py-5 bg-ink2/40"
+          >
+            <div
+              class="marquee whitespace-nowrap font-display text-2xl sm:text-3xl md:text-5xl chrome-text"
+            >
+              <div class="flex gap-12 pr-12">
+                <span>PB08 · BLENDZ</span><span class="text-crimson">✦</span>
+                <span>PRECISION CUTS</span><span class="text-crimson">✦</span>
+                <span>BEARD ARCHITECTURE</span
+                ><span class="text-crimson">✦</span> <span>CYBER LUXURY</span
+                ><span class="text-crimson">✦</span> <span>EST · 2025</span
+                ><span class="text-crimson">✦</span>
+              </div>
+              <div class="flex gap-12 pr-12" aria-hidden="true">
+                <span>PB08 · BLENDZ</span><span class="text-crimson">✦</span>
+                <span>PRECISION CUTS</span><span class="text-crimson">✦</span>
+                <span>BEARD ARCHITECTURE</span
+                ><span class="text-crimson">✦</span> <span>CYBER LUXURY</span
+                ><span class="text-crimson">✦</span> <span>EST · 2025</span
+                ><span class="text-crimson">✦</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Signature grid -->
+        <section class="max-w-[1400px] mx-auto px-5 md:px-10 py-24">
+          <div class="grid md:grid-cols-3 gap-5">
+            <article class="reveal glass rounded-3xl p-8 card-hover">
+              <div class="font-mono text-[10px] text-crimson">
+                /01 · SIGNATURE
+              </div>
+              <h3 class="font-display text-2xl mt-3 chrome-text">
+                CHROME FADE
+              </h3>
+              <p class="text-white/60 mt-3">
+                A mirror-polished skin fade engineered with sub-mm blade
+                control. Sculpted for reflectivity.
+              </p>
+            </article>
+            <article class="reveal glass rounded-3xl p-8 card-hover">
+              <div class="font-mono text-[10px] text-crimson">
+                /02 · SIGNATURE
+              </div>
+              <h3 class="font-display text-2xl mt-3 chrome-text">NEON BEARD</h3>
+              <p class="text-white/60 mt-3">
+                Vectorised jawline architecture, hot-towel primed, sealed with
+                obsidian oil.
+              </p>
+            </article>
+            <article class="reveal glass rounded-3xl p-8 card-hover">
+              <div class="font-mono text-[10px] text-crimson">
+                /03 · SIGNATURE
+              </div>
+              <h3 class="font-display text-2xl mt-3 chrome-text">
+                GROOMING PACKAGE
+              </h3>
+              <p class="text-white/60 mt-3">
+                The full protocol: haircut, beard, detan & scrub bundled into
+                one 90-minute session.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Neon map -->
+        <section
+          class="max-w-[1400px] mx-auto px-5 md:px-10 pb-24 grid lg:grid-cols-2 gap-10 items-center"
+        >
+          <div class="reveal">
+            <div class="font-mono text-[10px] text-crimson">// LOCATE.NODE</div>
+            <h2 class="font-display text-4xl sm:text-5xl md:text-6xl chrome-text mt-3">
+              4 LISA ST<br />BRAMPTON
+            </h2>
+            <p class="text-white/60 mt-5 max-w-md text-lg">
+              Docked in the Peel corridor. Walk-ins welcome — reservations flow
+              first. Signal us on
+              <span class="text-white">647-621-4671</span> or lock a chair
+              below.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a
+                href="tel:6476214671"
+                class="btn-ghost font-display text-[11px] px-6 py-3 rounded-full"
+                >CALL NODE</a
+              >
+              <button
+                data-nav="book"
+                class="btn-crimson font-display text-[11px] px-6 py-3 rounded-full"
+              >
+                BOOK NOW
+              </button>
+            </div>
+          </div>
+          <div class="reveal relative aspect-square max-w-md ml-auto w-full">
+            <div class="cyber-map absolute inset-0 rounded-full"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="glass rounded-2xl px-4 py-3 text-center">
+                <div class="font-mono text-[10px] text-crimson">
+                  PB08 · BLENDZ
+                </div>
+                <div class="font-display text-sm chrome-text">
+                  4 LISA ST · L6X
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- ================= MENU ================= -->
+      <section id="view-menu" class="view">
+        <div class="max-w-[1400px] mx-auto px-5 md:px-10 py-16">
+          <div class="flex flex-wrap items-end justify-between gap-6">
+            <div>
+              <div class="font-mono text-[10px] text-crimson">
+                // DIGITAL.MENU
+              </div>
+              <h2 class="font-display text-4xl sm:text-5xl md:text-7xl chrome-text mt-3">
+                THE MATRIX<br />OF SERVICES
+              </h2>
+            </div>
+            <div class="glass rounded-2xl p-4 min-w-[240px]">
+              <div class="font-mono text-[10px] text-white/50">LIVE TOTAL</div>
+              <div
+                id="menuTotal"
+                class="font-display text-4xl chrome-text mt-1"
+              >
+                $0
+              </div>
+              <div class="font-mono text-[10px] text-white/40 mt-1">
+                tap cards to compose · CAD
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="menuGrid"
+            class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 menu-grid"
+          ></div>
+
+          <div class="mt-10 flex flex-wrap gap-3">
+            <button
+              id="menuClear"
+              class="btn-ghost font-display text-[11px] px-6 py-3 rounded-full"
+            >
+              CLEAR SELECTION
+            </button>
+            <button
+              data-nav="book"
+              class="btn-crimson font-display text-[11px] px-6 py-3 rounded-full"
+            >
+              SEND TO BOOKING →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ELITE PASS ================= -->
+      <section id="view-pass" class="view">
+        <div class="max-w-[1400px] mx-auto px-5 md:px-10 py-16">
+          <div class="text-center max-w-2xl mx-auto">
+            <div class="font-mono text-[10px] text-crimson">// ELITE.PASS</div>
+            <h2 class="font-display text-4xl sm:text-5xl md:text-7xl chrome-text mt-3">
+              MEMBERSHIP<br />PROTOCOL
+            </h2>
+            <p class="text-white/60 mt-5 text-lg">
+              Two tiers. Zero compromise. Sculpted for men who treat grooming as
+              ritual.
+            </p>
+
+            <div class="inline-flex mt-8 p-1 rounded-full hairline">
+              <button
+                data-cycle="1"
+                class="cycle-btn active-cycle font-display text-[11px] px-5 py-2 rounded-full"
+              >
+                MONTHLY
+              </button>
+              <button
+                data-cycle="2"
+                class="cycle-btn font-display text-[11px] px-5 py-2 rounded-full text-white/60"
+              >
+                BI-MONTHLY
+              </button>
+            </div>
+          </div>
+
+          <div class="mt-14 grid md:grid-cols-2 gap-6">
+            <!-- Tier 1 -->
+            <div
+              class="relative glass rounded-3xl p-8 md:p-10 card-hover overflow-hidden"
+            >
+              <div
+                class="absolute -top-24 -right-24 w-64 h-64 rounded-full"
+                style="
+                  background: radial-gradient(
+                    closest-side,
+                    rgba(201, 206, 214, 0.18),
+                    transparent 70%
+                  );
+                "
+              ></div>
+              <div class="font-mono text-[10px] text-white/50">TIER · 01</div>
+              <h3 class="font-display text-3xl chrome-text mt-2">
+                STANDARD CLUB
+              </h3>
+              <div class="mt-6 flex items-baseline gap-2">
+                <span class="font-display text-5xl sm:text-6xl chrome-text"
+                  >$50</span
+                >
+                <span class="text-white/50 font-mono text-xs">/ 1 MONTH</span>
+              </div>
+              <ul class="mt-8 space-y-3 text-white/80">
+                <li class="flex gap-3">
+                  <span class="text-crimson">✦</span> 2× Precision Hair Cuts
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-crimson">✦</span> 1× Beard Styling Session
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-crimson">✦</span> 1× Free — Scrub or Head
+                  Massage
+                </li>
+                <li class="flex gap-3 text-white/50">
+                  <span class="text-crimson">✦</span> Priority phone
+                  reservations
+                </li>
+              </ul>
+              <button
+                data-nav="book"
+                class="mt-10 w-full btn-ghost font-display text-[11px] px-6 py-4 rounded-full"
+              >
+                ACTIVATE STANDARD
+              </button>
+            </div>
+            <!-- Tier 2 -->
+            <div
+              class="relative rounded-3xl p-8 md:p-10 card-hover overflow-hidden neon-border"
+              style="
+                background: linear-gradient(
+                  180deg,
+                  rgba(255, 0, 60, 0.1),
+                  rgba(255, 0, 60, 0.02) 60%,
+                  rgba(0, 0, 0, 0.6)
+                );
+              "
+            >
+              <div
+                class="absolute -top-24 -right-24 w-64 h-64 rounded-full"
+                style="
+                  background: radial-gradient(
+                    closest-side,
+                    rgba(255, 0, 60, 0.35),
+                    transparent 70%
+                  );
+                "
+              ></div>
+              <div class="flex justify-between items-start gap-3">
+                <div>
+                  <div class="font-mono text-[10px] text-crimson">
+                    TIER · 02 · MENS ONLY
+                  </div>
+                  <h3 class="font-display text-3xl crimson-glow mt-2">
+                    VIP EXECUTIVE
+                  </h3>
+                </div>
+                <div
+                  class="chip px-3 py-1 rounded-full font-mono text-[10px] text-white shrink-0"
+                >
+                  MOST WANTED
+                </div>
+              </div>
+              <div class="mt-6 flex items-baseline gap-2">
+                <span class="font-display text-5xl sm:text-6xl crimson-glow"
+                  >$100</span
+                >
+                <span class="text-white/60 font-mono text-xs">/ 2 MONTHS</span>
+              </div>
+              <ul class="mt-8 space-y-3 text-white">
+                <li class="flex gap-3">
+                  <span class="text-crimson">✦</span> 4× Hair Cuts w/ Integrated
+                  Beard Design
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-crimson">✦</span> 2× Free — Detan or Scrub
+                  Treatments
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-crimson">✦</span> VIP chair on standby, no
+                  queue
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-crimson">✦</span> Concierge SMS from Master
+                  Barber
+                </li>
+              </ul>
+              <button
+                data-nav="book"
+                class="mt-10 w-full btn-crimson font-display text-[11px] px-6 py-4 rounded-full"
+              >
+                ACTIVATE VIP →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= BOOKING TERMINAL ================= -->
+      <section id="view-book" class="view">
+        <div class="max-w-[1400px] mx-auto px-5 md:px-10 py-14">
+          <div class="flex flex-wrap items-end justify-between gap-6">
+            <div>
+              <div class="font-mono text-[10px] text-crimson">
+                // CORE.TERMINAL
+              </div>
+              <h2 class="font-display text-3xl sm:text-4xl md:text-6xl chrome-text mt-3">
+                BOOKING ENGINE
+              </h2>
+            </div>
+            <div
+              class="flex items-center flex-wrap gap-2 font-mono text-[10px] text-white/50"
+            >
+              <span>PHASE</span>
+              <div id="stepDots" class="flex items-center gap-2 ml-1 sm:ml-2">
+                <span class="step-dot on"></span><span class="step-dot"></span
+                ><span class="step-dot"></span><span class="step-dot"></span>
+              </div>
+              <span id="stepLabel" class="ml-2 sm:ml-3 text-white"
+                >01 · SERVICE</span
+              >
+            </div>
+          </div>
+
+          <div class="mt-10 grid lg:grid-cols-[1fr_380px] gap-8 booking-grid">
+            <!-- Wizard body -->
+            <div class="relative min-w-0">
+              <!-- STEP 1 SERVICES -->
+              <div class="step" data-step="1">
+                <div class="font-display text-2xl chrome-text mb-2">
+                  Choose a service
+                </div>
+                <p class="text-white/50 text-sm mb-6">
+                  Every step ahead is tailored to what you pick here — chair
+                  time, specialist and available slots all adapt to your
+                  service.
+                </p>
+                <div id="bookServices" class="grid sm:grid-cols-2 gap-4"></div>
+              </div>
+              <!-- STEP 2 PROFESSIONAL -->
+              <div class="step hidden" data-step="2">
+                <div class="font-display text-2xl chrome-text mb-2">
+                  Choose your chair
+                </div>
+                <p id="proHelper" class="text-white/50 text-sm mb-6"></p>
+                <div
+                  id="bookPros"
+                  class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"
+                ></div>
+              </div>
+              <!-- STEP 3 TIME -->
+              <div class="step hidden" data-step="3">
+                <div class="font-display text-2xl chrome-text mb-2">
+                  Chronos scheduler
+                </div>
+                <div id="durHelper" class="font-mono text-[10px] text-white/50">
+                  BRAMPTON.LOCAL
+                </div>
+                <div
+                  id="dayRow"
+                  class="mt-6 flex gap-3 overflow-x-auto pb-2 -mx-1 px-1"
+                ></div>
+                <div
+                  id="pickedDayLabel"
+                  class="mt-6 font-display text-lg chrome-text"
+                ></div>
+                <div
+                  id="slotGrid"
+                  class="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3"
+                ></div>
+              </div>
+              <!-- STEP 4 REVIEW -->
+              <div class="step hidden" data-step="4">
+                <div class="font-display text-2xl chrome-text mb-6">
+                  Your ledger
+                </div>
+                <div class="glass rounded-3xl p-4 sm:p-6">
+                  <div id="orderGuests" class="space-y-4"></div>
+                  <button
+                    id="addGuest"
+                    class="mt-6 w-full flex items-center justify-between glass rounded-2xl px-5 py-4 hover:border-crimson transition"
+                  >
+                    <span class="text-left">
+                      <div class="font-display text-sm chrome-text">
+                        + ADD GUEST TO ORDER
+                      </div>
+                      <div class="text-xs text-white/50">
+                        Checkout all at once
+                      </div>
+                    </span>
+                    <span
+                      class="btn-crimson font-display text-[11px] px-4 py-2 rounded-full"
+                      >ADD</span
+                    >
+                  </button>
+
+                  <div class="mt-8 grid sm:grid-cols-2 gap-3">
+                    <input
+                      id="custName"
+                      class="hairline rounded-xl px-4 py-3 text-sm"
+                      placeholder="Your name"
+                    />
+                    <input
+                      id="custPhone"
+                      class="hairline rounded-xl px-4 py-3 text-sm"
+                      placeholder="Mobile · 647-…"
+                    />
+                  </div>
+                  <textarea
+                    id="custNotes"
+                    class="mt-3 w-full hairline rounded-xl px-4 py-3 text-sm"
+                    rows="2"
+                    placeholder="Notes for your master barber…"
+                  ></textarea>
+                  <div class="mt-3 font-mono text-[10px] text-white/40">
+                    Name & mobile number are required — we use them to confirm
+                    your reservation on WhatsApp / SMS.
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-10 flex justify-between">
+                <button
+                  id="prevStep"
+                  class="btn-ghost font-display text-[11px] px-6 py-3 rounded-full opacity-50"
+                >
+                  ← BACK
+                </button>
+                <button
+                  id="nextStep"
+                  class="btn-crimson font-display text-[11px] px-6 py-3 rounded-full"
+                >
+                  CONTINUE →
+                </button>
+              </div>
+            </div>
+
+            <!-- Sticky order pane -->
+            <aside
+              class="lg:sticky lg:top-28 h-fit rounded-3xl p-6 neon-border booking-aside"
+              style="
+                background: linear-gradient(
+                  180deg,
+                  rgba(255, 255, 255, 0.04),
+                  rgba(0, 0, 0, 0.4)
+                );
+              "
+            >
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="font-display text-lg chrome-text">Your order</div>
+                  <div class="text-xs text-white/50">PB08 BLENDZ · Ledger</div>
+                </div>
+                <div
+                  class="w-9 h-9 grid place-items-center rounded-full hairline text-white/60 text-xs"
+                >
+                  ×
+                </div>
+              </div>
+              <div id="summaryLines" class="mt-6 space-y-3"></div>
+              <div
+                class="mt-6 pt-6 border-t border-white/10 flex items-center justify-between"
+              >
+                <span class="font-display text-sm text-white/70">Subtotal</span>
+                <span
+                  id="summaryTotal"
+                  class="font-display text-3xl chrome-text"
+                  >$0</span
+                >
+              </div>
+              <button
+                id="confirmBtn"
+                class="mt-6 w-full btn-crimson font-display text-[11px] px-6 py-4 rounded-full"
+              >
+                CONFIRM & SEND TO WHATSAPP →
+              </button>
+              <div class="mt-3 text-[10px] font-mono text-white/40 text-center">
+                Sent via WhatsApp · Ledger #PB08-<span id="ledgerId">████</span>
+              </div>
+              <div class="mt-2 text-center">
+                <a
+                  id="smsFallback"
+                  href="#"
+                  class="text-[10px] font-mono text-white/40 underline hover:text-white/70"
+                  >Prefer SMS instead? Tap here</a
+                >
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CREW ================= -->
+      <section id="view-crew" class="view">
+        <div class="max-w-[1400px] mx-auto px-5 md:px-10 py-16">
+          <div class="max-w-3xl">
+            <div class="font-mono text-[10px] text-crimson">
+              // CRAFT · CREW
+            </div>
+            <h2 class="font-display text-4xl sm:text-5xl md:text-7xl chrome-text mt-3">
+              MASTER OF<br />THE BLADE
+            </h2>
+            <p class="text-white/60 mt-5 text-lg">
+              One architect. One atelier. Every chair is programmed to Bobby's
+              signature language of grooming.
+            </p>
+          </div>
+
+          <div class="mt-14 grid sm:grid-cols-1 max-w-md crew-grid">
+            <article class="glass rounded-3xl p-8 card-hover">
+              <div
+                class="w-full aspect-[4/5] rounded-2xl mb-6"
+                style="
+                  background: linear-gradient(135deg, #1a1a1a, #333);
+                  position: relative;
+                  overflow: hidden;
+                "
+              >
+                <div
+                  class="absolute inset-0 grid place-items-center font-display text-7xl chrome-text"
+                >
+                  BP
+                </div>
+                <div
+                  class="absolute bottom-3 left-3 chip px-3 py-1 rounded-full font-mono text-[10px]"
+                >
+                  <span class="live-dot inline-block mr-1"></span>AVAILABLE
+                </div>
+              </div>
+              <div class="font-display text-2xl chrome-text">BOBBY S.</div>
+              <div class="font-mono text-[10px] text-crimson mt-1">
+                FOUNDER · MASTER BARBER
+              </div>
+              <p class="text-white/60 mt-4">
+                Engineer of chrome-mirror fades, vector beard design and skin
+                rituals. Signature: the "PB08 Zero" — a razor-tight skin drop
+                with a sculpted crown.
+              </p>
+            </article>
+          </div>
+
+          <!-- Equipment editorial -->
+          <div class="mt-24 grid lg:grid-cols-3 gap-6">
+            <div class="lg:col-span-2 glass rounded-3xl p-6 sm:p-10">
+              <div class="font-mono text-[10px] text-crimson">
+                // TOOLING · ATELIER
+              </div>
+              <h3 class="font-display text-3xl sm:text-4xl chrome-text mt-3">
+                Chrome tools. Analog soul.
+              </h3>
+              <p class="text-white/60 mt-4 max-w-xl">
+                Cordless clippers with 0.1 mm resolution. German steel scissors,
+                hand-forged. Hot-towel warmers dialled to 42°C. Every station is
+                a cockpit.
+              </p>
+              <div
+                class="mt-8 grid grid-cols-3 gap-4 font-mono text-[11px] text-white/60"
+              >
+                <div>
+                  <div class="chrome-text font-display text-2xl">0.1mm</div>
+                  BLADE PRECISION
+                </div>
+                <div>
+                  <div class="chrome-text font-display text-2xl">42°C</div>
+                  TOWEL TEMP
+                </div>
+                <div>
+                  <div class="chrome-text font-display text-2xl">01</div>
+                  COCKPIT
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative rounded-3xl overflow-hidden neon-border p-8 sm:p-10"
+              style="background: linear-gradient(180deg, #12000a, #0a0a0a)"
+            >
+              <div class="font-display text-2xl crimson-glow">ATELIER LAW</div>
+              <p class="text-white/70 mt-4">
+                "Every cut is a signature. Every chair, a runway. Every man, a
+                crown."
+              </p>
+              <div class="mt-6 font-mono text-[10px] text-white/50">
+                — PB08 · DOCTRINE 001
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CONTACT ================= -->
+      <section id="view-contact" class="view">
+        <div class="max-w-[1400px] mx-auto px-5 md:px-10 py-16">
+          <div class="grid lg:grid-cols-2 gap-10">
+            <div>
+              <div class="font-mono text-[10px] text-crimson">
+                // COMMS.TERMINAL
+              </div>
+              <h2 class="font-display text-4xl sm:text-5xl md:text-7xl chrome-text mt-3">
+                SIGNAL<br />THE ATELIER
+              </h2>
+              <div class="mt-10 space-y-5">
+                <div
+                  class="glass rounded-2xl p-5 flex items-center justify-between gap-3"
+                >
+                  <div>
+                    <div class="font-mono text-[10px] text-white/50">PHONE</div>
+                    <div class="font-display text-lg sm:text-xl chrome-text">
+                      647-621-4671
+                    </div>
+                  </div>
+                  <a
+                    href="tel:6476214671"
+                    class="btn-crimson font-display text-[11px] px-5 py-2.5 rounded-full shrink-0"
+                    >CALL</a
+                  >
+                </div>
+                <div
+                  class="glass rounded-2xl p-5 flex items-center justify-between gap-3"
+                >
+                  <div class="min-w-0">
+                    <div class="font-mono text-[10px] text-white/50">EMAIL</div>
+                    <div class="font-display text-sm chrome-text break-all">
+                      bobbysarai2003@gmail.com
+                    </div>
+                  </div>
+                  <a
+                    href="mailto:bobbysarai2003@gmail.com"
+                    class="btn-ghost font-display text-[11px] px-5 py-2.5 rounded-full shrink-0"
+                    >SEND</a
+                  >
+                </div>
+                <div class="glass rounded-2xl p-5">
+                  <div class="font-mono text-[10px] text-white/50">
+                    LOCATION
+                  </div>
+                  <div class="font-display text-lg sm:text-xl chrome-text">
+                    4 Lisa Street · Brampton, ON
+                  </div>
+                  <div
+                    class="mt-3 flex items-center gap-2 font-mono text-[10px] text-white/60"
+                  >
+                    <span class="live-dot open-status-dot"></span>
+                    <span class="open-status-text"
+                      >OPEN NOW · 9:00 AM – 1:00 PM</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="glass rounded-2xl p-5 grid grid-cols-7 gap-1 sm:gap-2 text-center font-mono text-[9px] sm:text-[10px] hours-grid"
+                >
+                  <div>
+                    <div class="text-white/50">MON</div>
+                    <div class="text-white">09–13</div>
+                  </div>
+                  <div>
+                    <div class="text-white/50">TUE</div>
+                    <div class="text-white">09–13</div>
+                  </div>
+                  <div>
+                    <div class="text-white/50">WED</div>
+                    <div class="text-white">09–13</div>
+                  </div>
+                  <div>
+                    <div class="text-white/50">THU</div>
+                    <div class="text-white">09–13</div>
+                  </div>
+                  <div>
+                    <div class="text-white/50">FRI</div>
+                    <div class="text-white">09–13</div>
+                  </div>
+                  <div>
+                    <div class="text-white/50">SAT</div>
+                    <div class="text-white">09–20</div>
+                  </div>
+                  <div>
+                    <div class="text-white/50">SUN</div>
+                    <div class="text-white">09–20</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <form id="contactForm" class="glass rounded-3xl p-6 sm:p-8">
+              <div class="font-display text-2xl chrome-text">
+                Async formulation
+              </div>
+              <div class="text-xs text-white/50 mt-1">
+                We reply within 12 hrs · encrypted channel
+              </div>
+              <div class="mt-6 space-y-4">
+                <input
+                  required
+                  class="w-full hairline rounded-xl px-4 py-3 text-sm"
+                  placeholder="Full name"
+                />
+                <input
+                  required
+                  type="email"
+                  class="w-full hairline rounded-xl px-4 py-3 text-sm"
+                  placeholder="Email"
+                />
+                <input
+                  class="w-full hairline rounded-xl px-4 py-3 text-sm"
+                  placeholder="Phone (optional)"
+                />
+                <select
+                  class="w-full hairline rounded-xl px-4 py-3 text-sm bg-ink"
+                >
+                  <option>Booking inquiry</option>
+                  <option>Membership question</option>
+                  <option>Bridal / event party</option>
+                  <option>Partnership</option>
+                </select>
+                <textarea
+                  rows="5"
+                  class="w-full hairline rounded-xl px-4 py-3 text-sm"
+                  placeholder="Your message…"
+                ></textarea>
+                <button
+                  class="w-full btn-crimson font-display text-[11px] px-6 py-4 rounded-full"
+                >
+                  TRANSMIT MESSAGE →
+                </button>
+              </div>
+              <div
+                id="contactOk"
+                class="hidden mt-4 text-crimson font-mono text-xs text-center"
+              >
+                ▲ SIGNAL RECEIVED · WE'LL BE IN TOUCH.
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="relative mt-24 border-t border-white/10 bg-ink2/50">
+      <div
+        class="max-w-[1400px] mx-auto px-5 md:px-10 py-16 grid md:grid-cols-4 gap-10"
+      >
+        <div class="md:col-span-2">
+          <img
+            src="/pb08-logo.jpg"
+            alt="PB08 BLENDZ"
+            class="w-20 h-20 sm:w-24 sm:h-24 rounded-full ring-1 ring-white/10 mb-6"
+          />
+          <div
+            class="font-display text-4xl sm:text-5xl md:text-6xl chrome-text leading-none"
+          >
+            PB08<br />BLENDZ
+          </div>
+          <div class="font-mono text-[11px] text-white/50 mt-4">
+            EST · 2025 · BRAMPTON · ONTARIO
+          </div>
+        </div>
+        <div>
+          <div class="font-display text-sm text-white/80 mb-4">ATELIER</div>
+          <ul class="space-y-2 text-white/60 text-sm">
+            <li>
+              <a class="hover:text-white nav-link" data-nav="menu">Menu</a>
+            </li>
+            <li>
+              <a class="hover:text-white nav-link" data-nav="pass"
+                >Elite Pass</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-white nav-link" data-nav="book">Book</a>
+            </li>
+            <li>
+              <a class="hover:text-white nav-link" data-nav="crew">Crew</a>
+            </li>
+            <li>
+              <a class="hover:text-white nav-link" data-nav="contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-display text-sm text-white/80 mb-4">SIGNAL</div>
+          <ul class="space-y-2 text-white/60 text-sm">
+            <li>4 Lisa Street, Brampton</li>
+            <li>647-621-4671</li>
+            <li class="break-all">bobbysarai2003@gmail.com</li>
+            <li class="font-mono text-[10px] text-white/40 mt-2">
+              MON–FRI 9AM–1PM · SAT–SUN 9AM–8PM
+            </li>
+            <li class="font-mono text-[10px] text-white/40">
+              © 2025–2030 PB08 BLENDZ · ALL RIGHTS RESERVED
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center pb-6 font-mono text-[10px] text-white/30">
+        BE PREMIUM · BE YOU
+      </div>
+    </footer>
+
+    <script>
+      /* =========================================================
+   PB08 BLENDZ · Cyber-Luxury SPA controller (vanilla JS)
+   ========================================================= */
+
+      /* --------- Business hours (used for header/contact status) ---------
+   Monday–Friday: 9:00 AM – 1:00 PM
+   Saturday–Sunday: 9:00 AM – 8:00 PM
+*/
+      const BUSINESS_HOURS = {
+        weekday: { open: 9, close: 13, label: "9:00 AM – 1:00 PM" },
+        weekend: { open: 9, close: 20, label: "9:00 AM – 8:00 PM" },
+      };
+
+      function computeOpenStatus() {
+        const now = new Date();
+        const day = now.getDay(); // 0 Sun ... 6 Sat
+        const hourFloat = now.getHours() + now.getMinutes() / 60;
+        const isWeekendToday = day === 0 || day === 6;
+        const hours = isWeekendToday
+          ? BUSINESS_HOURS.weekend
+          : BUSINESS_HOURS.weekday;
+        const isOpen = hourFloat >= hours.open && hourFloat < hours.close;
+        return { isOpen, label: hours.label };
+      }
+
+      function applyOpenStatus() {
+        const { isOpen, label } = computeOpenStatus();
+        document.querySelectorAll(".open-status-text").forEach((el) => {
+          el.textContent = (isOpen ? "OPEN NOW" : "CLOSED") + " · " + label;
+        });
+        document.querySelectorAll(".open-status-dot").forEach((el) => {
+          el.style.background = isOpen ? "#00ff88" : "#666";
+          el.style.boxShadow = isOpen ? "0 0 10px #00ff88" : "none";
+          el.style.animation = isOpen ? "" : "none";
+        });
+      }
+
+      /* Each service carries a duration (minutes) and a category tag.
+   The category tag drives which downstream booking options (chair /
+   specialist framing + how many chronos slots are exposed) appear —
+   a haircut behaves differently from a full chair/package booking. */
+      const SERVICES = [
+        {
+          id: "haircut",
+          name: "Hair Cut",
+          dur: "30 min",
+          minutes: 30,
+          price: 20,
+          icon: "✂",
+          category: "hair",
+        },
+        {
+          id: "beard",
+          name: "Beard",
+          dur: "30 min",
+          minutes: 30,
+          price: 10,
+          icon: "𓂀",
+          category: "beard",
+        },
+        {
+          id: "both",
+          name: "Hair Cut & Beard",
+          dur: "1 hr",
+          minutes: 60,
+          price: 25,
+          icon: "⚡",
+          tag: "COMBO",
+          category: "hair",
+        },
+        {
+          id: "grooming",
+          name: "Grooming Package",
+          dur: "1.5 hr",
+          minutes: 90,
+          price: 40,
+          icon: "👑",
+          tag: "PACKAGE",
+          category: "package",
+          includes: ["Hair Cut", "Beard", "Detan", "Scrub"],
+        },
+        {
+          id: "detanscrub",
+          name: "Detan Scrub",
+          dur: "30 min",
+          minutes: 30,
+          price: 25,
+          icon: "◈",
+          category: "skin",
+        },
+        {
+          id: "detan",
+          name: "Detan",
+          dur: "15 min",
+          minutes: 15,
+          price: 15,
+          icon: "◇",
+          category: "skin",
+        },
+        {
+          id: "scrub",
+          name: "Scrub",
+          dur: "15 min",
+          minutes: 15,
+          price: 15,
+          icon: "✷",
+          category: "skin",
+        },
+        {
+          id: "massage",
+          name: "Head Massage",
+          dur: "15 min",
+          minutes: 15,
+          price: 15,
+          icon: "☯",
+          category: "relax",
+        },
+      ];
+
+      /* Only Bobby now — "chair" framing since there's a single station. */
+      const PROS = [
+        {
+          id: "any",
+          name: "Next Available Chair",
+          tag: "Fastest option",
+          code: "★",
+        },
+        {
+          id: "bobby",
+          name: "Bobby S.",
+          tag: "Available Today",
+          code: "BP",
+        },
+      ];
+
+      const CATEGORY_COPY = {
+        hair: "A dedicated haircut slot at Bobby's chair — quick in, quick out.",
+        beard: "Beard architecture at the chair, hot-towel primed.",
+        package:
+          "The full 90-minute chair session — Bobby blocks extra time so nothing is rushed.",
+        skin: "A skin-focused station booking — detan, scrub and massage share this bench.",
+        relax: "A relaxation slot at the treatment bench.",
+      };
+
+      /* ----------------------------------------------------------
+   DYNAMIC DATE GENERATION — starts from today, never past dates
+   ---------------------------------------------------------- */
+      const DAY_NAMES = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      const MONTH_NAMES = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December",
+      ];
+
+      function generateDays(count) {
+        const days = [];
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        for (let i = 0; i < count; i++) {
+          const d = new Date(today);
+          d.setDate(today.getDate() + i);
+          days.push({
+            date: d,
+            dayNum: d.getDate(),
+            dow: d.getDay(),
+            label: DAY_NAMES[d.getDay()],
+            month: d.getMonth(),
+            year: d.getFullYear(),
+            isToday: i === 0,
+            off: false,
+          });
+        }
+        return days;
+      }
+
+      const DAYS = generateDays(10);
+
+      function formatDateLong(dayObj) {
+        if (!dayObj) return "";
+        return (
+          dayObj.label +
+          ", " +
+          MONTH_NAMES[dayObj.month] +
+          " " +
+          dayObj.dayNum +
+          ", " +
+          dayObj.year
+        );
+      }
+
+      function formatDateShort(dayObj) {
+        if (!dayObj) return "";
+        return (
+          MONTH_NAMES[dayObj.month] + " " + dayObj.dayNum + ", " + dayObj.year
+        );
+      }
+
+      /* Chronos slots respect the real operating hours:
+   Weekdays (Mon–Fri): 9:00 AM – 1:00 PM
+   Weekends (Sat–Sun): 9:00 AM – 8:00 PM */
+      const WEEKDAY_SLOTS = [
+        "9:00am",
+        "9:30am",
+        "10:00am",
+        "10:30am",
+        "11:00am",
+        "11:30am",
+        "12:00pm",
+        "12:30pm",
+      ];
+      const WEEKEND_SLOTS = [
+        "9:00am",
+        "9:30am",
+        "10:00am",
+        "10:30am",
+        "11:00am",
+        "11:30am",
+        "12:00pm",
+        "12:30pm",
+        "1:00pm",
+        "1:30pm",
+        "2:00pm",
+        "2:30pm",
+        "3:00pm",
+        "3:30pm",
+        "4:00pm",
+        "4:30pm",
+        "5:00pm",
+        "5:30pm",
+        "6:00pm",
+        "6:30pm",
+        "7:00pm",
+        "7:30pm",
+      ];
+
+      function isWeekendDayObj(dayObj) {
+        if (!dayObj) return false;
+        return dayObj.dow === 0 || dayObj.dow === 6;
+      }
+
+      function slotsForDayObj(dayObj) {
+        return isWeekendDayObj(dayObj) ? WEEKEND_SLOTS : WEEKDAY_SLOTS;
+      }
+
+      /* Convert a slot string like "9:30am" to a comparable number (minutes from midnight) */
+      function slotToMinutes(slot) {
+        const match = slot.match(/(\d+):(\d+)(am|pm)/i);
+        if (!match) return 0;
+        let h = parseInt(match[1], 10);
+        const m = parseInt(match[2], 10);
+        const ap = match[3].toLowerCase();
+        if (ap === "pm" && h !== 12) h += 12;
+        if (ap === "am" && h === 12) h = 0;
+        return h * 60 + m;
+      }
+
+      const state = {
+        view: "home",
+        menuPicks: new Set(),
+        step: 1,
+        service: null,
+        pro: null,
+        dayIndex: 0, // index into DAYS array, 0 = today
+        time: null,
+        guests: [],
+      };
+
+      function currentService() {
+        return SERVICES.find((s) => s.id === state.service) || null;
+      }
+
+      function currentDay() {
+        return DAYS[state.dayIndex] || DAYS[0];
+      }
+
+      /* ---------- Router ---------- */
+      function go(view) {
+        if (state.view === view) return;
+        state.view = view;
+        document
+          .querySelectorAll(".view")
+          .forEach((v) => v.classList.remove("active", "clip-sweep"));
+        const el = document.getElementById("view-" + view);
+        el.classList.add("active", "clip-sweep");
+        window.scrollTo({ top: 0, behavior: "instant" });
+        document.querySelectorAll(".nav-link").forEach((a) => {
+          a.classList.toggle("text-white", a.dataset.nav === view);
+          a.classList.toggle("crimson-glow", a.dataset.nav === view);
+        });
+        closeDrawer();
+      }
+      document.addEventListener("click", (e) => {
+        const t = e.target.closest("[data-nav]");
+        if (t) {
+          e.preventDefault();
+          go(t.dataset.nav);
+        }
+      });
+
+      /* ---------- Drawer ---------- */
+      const drawer = document.getElementById("drawer");
+      const drawerBackdrop = document.getElementById("drawerBackdrop");
+      const burgerBtn = document.getElementById("burger");
+      burgerBtn.onclick = () => {
+        const open = !drawer.classList.contains("open");
+        drawer.classList.toggle("open", open);
+        drawerBackdrop.classList.toggle("open", open);
+        burgerBtn.classList.toggle("is-open", open);
+        document.body.style.overflow = open ? "hidden" : "";
+      };
+      document.getElementById("closeDrawer").onclick = closeDrawer;
+      drawerBackdrop.onclick = closeDrawer;
+      function closeDrawer() {
+        drawer.classList.remove("open");
+        drawerBackdrop.classList.remove("open");
+        burgerBtn.classList.remove("is-open");
+        document.body.style.overflow = "";
+      }
+
+      /* ---------- Scroll behaviour ---------- */
+      window.addEventListener("scroll", () => {
+        document.body.classList.toggle("shrunk", window.scrollY > 40);
+      });
+
+      /* ---------- Reveal ---------- */
+      const io = new IntersectionObserver(
+        (es) => {
+          es.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+      /* ---------- Scramble (once on load, then periodic) ---------- */
+      function scramble(el, final) {
+        const chars = "01#XZ$%✦◇◈▲";
+        let i = 0;
+        const orig = final;
+        const t = setInterval(() => {
+          let out = "";
+          for (let k = 0; k < orig.length; k++) {
+            out +=
+              k < i ? orig[k] : chars[Math.floor(Math.random() * chars.length)];
+          }
+          el.textContent = out;
+          i++;
+          if (i > orig.length) {
+            clearInterval(t);
+            el.textContent = orig;
+          }
+        }, 40);
+      }
+      document.querySelectorAll(".scramble").forEach((el) => {
+        const final = el.dataset.scramble || el.textContent;
+        setTimeout(() => scramble(el, final), 400);
+      });
+
+      /* ---------- Magnetic hover on buttons (skipped on touch) ---------- */
+      const isCoarsePointer = window.matchMedia("(pointer: coarse)").matches;
+      if (!isCoarsePointer) {
+        document.querySelectorAll(".btn-crimson, .btn-ghost").forEach((b) => {
+          b.classList.add("magnet");
+          b.addEventListener("mousemove", (e) => {
+            const r = b.getBoundingClientRect();
+            const x = (e.clientX - r.left - r.width / 2) / r.width;
+            const y = (e.clientY - r.top - r.height / 2) / r.height;
+            b.style.transform = `translate(${x * 8}px, ${y * 8}px)`;
+          });
+          b.addEventListener("mouseleave", () => (b.style.transform = ""));
+        });
+      }
+
+      /* ---------- MENU VIEW ---------- */
+      const menuGrid = document.getElementById("menuGrid");
+      const menuTotalEl = document.getElementById("menuTotal");
+      function renderMenu() {
+        menuGrid.innerHTML = SERVICES.map(
+          (s) => `
+    <button data-id="${s.id}" class="menu-card group text-left glass rounded-3xl p-6 card-hover relative overflow-hidden ${state.menuPicks.has(s.id) ? "neon-border" : ""}">
+      <div class="flex justify-between items-start gap-2">
+        <div class="font-mono text-[10px] text-crimson">// ${s.dur.toUpperCase()}</div>
+        ${s.tag ? `<div class="chip px-2 py-0.5 rounded-full font-mono text-[10px] text-white shrink-0">${s.tag}</div>` : ""}
+      </div>
+      <div class="text-4xl mt-4 chrome-text">${s.icon}</div>
+      <div class="font-display text-2xl chrome-text mt-3">${s.name.toUpperCase()}</div>
+      ${s.includes ? `<div class="text-white/50 text-sm mt-2">${s.includes.join(" · ")}</div>` : ""}
+      <div class="mt-4 flex items-end justify-between">
+        <div class="text-white/60 text-sm">CAD</div>
+        <div class="font-display text-3xl ${state.menuPicks.has(s.id) ? "crimson-glow" : "chrome-text"}">$${s.price}</div>
+      </div>
+      <div class="absolute inset-x-0 bottom-0 h-[2px] ${state.menuPicks.has(s.id) ? "bg-crimson" : "bg-white/10"}"></div>
+    </button>
+  `,
+        ).join("");
+        menuGrid.querySelectorAll(".menu-card").forEach((el) => {
+          el.onclick = () => {
+            const id = el.dataset.id;
+            state.menuPicks.has(id)
+              ? state.menuPicks.delete(id)
+              : state.menuPicks.add(id);
+            renderMenu();
+          };
+        });
+        const total = [...state.menuPicks].reduce(
+          (a, id) => a + SERVICES.find((s) => s.id === id).price,
+          0,
+        );
+        menuTotalEl.textContent = "$" + total;
+      }
+      document.getElementById("menuClear").onclick = () => {
+        state.menuPicks.clear();
+        renderMenu();
+      };
+      renderMenu();
+
+      /* ---------- BOOKING ---------- */
+      const stepDots = document.getElementById("stepDots");
+      const stepLabel = document.getElementById("stepLabel");
+      const STEP_LABELS = [
+        "",
+        "01 · SERVICE",
+        "02 · CHAIR",
+        "03 · CHRONOS",
+        "04 · LEDGER",
+      ];
+
+      function setStep(n) {
+        state.step = Math.max(1, Math.min(4, n));
+        document
+          .querySelectorAll(".step")
+          .forEach((s) =>
+            s.classList.toggle("hidden", +s.dataset.step !== state.step),
+          );
+        [...stepDots.children].forEach((d, i) =>
+          d.classList.toggle("on", i < state.step),
+        );
+        stepLabel.textContent = STEP_LABELS[state.step];
+        document
+          .getElementById("prevStep")
+          .classList.toggle("opacity-50", state.step === 1);
+        document.getElementById("nextStep").textContent =
+          state.step === 4 ? "CONFIRM →" : "CONTINUE →";
+        if (state.step === 2) renderPros();
+        if (state.step === 3) {
+          renderDays();
+          renderSlots();
+        }
+        renderSummary();
+      }
+      document.getElementById("prevStep").onclick = () =>
+        setStep(state.step - 1);
+      document.getElementById("nextStep").onclick = () => {
+        if (state.step === 4) {
+          confirmBooking();
+          return;
+        }
+        if (state.step === 1 && !state.service) {
+          pulseWarn("Choose a service");
+          return;
+        }
+        if (state.step === 2 && !state.pro) {
+          pulseWarn("Choose a chair");
+          return;
+        }
+        if (state.step === 3 && !state.time) {
+          pulseWarn("Pick a time");
+          return;
+        }
+        setStep(state.step + 1);
+      };
+      function pulseWarn(msg) {
+        const b = document.getElementById("nextStep");
+        const old = b.textContent;
+        b.textContent = msg.toUpperCase();
+        b.style.animation = "shake .4s";
+        setTimeout(() => {
+          b.textContent = old;
+          b.style.animation = "";
+        }, 1200);
+      }
+
+      /* Step 1 */
+      function renderBookServices() {
+        const grid = document.getElementById("bookServices");
+        grid.innerHTML = SERVICES.map(
+          (s) => `
+    <button data-id="${s.id}" class="svc text-left glass rounded-2xl p-5 card-hover ${state.service === s.id ? "neon-border" : ""}">
+      <div class="flex justify-between items-start gap-3">
+        <div class="min-w-0">
+          <div class="font-display text-lg chrome-text">${s.name}</div>
+          <div class="text-white/50 text-xs mt-1">${s.dur}${s.includes ? " · " + s.includes.join(", ") : ""}</div>
+        </div>
+        <div class="chip px-3 py-1 rounded-full font-mono text-xs shrink-0">$${s.price}</div>
+      </div>
+    </button>
+  `,
+        ).join("");
+        grid.querySelectorAll(".svc").forEach(
+          (el) =>
+            (el.onclick = () => {
+              const changed = state.service !== el.dataset.id;
+              state.service = el.dataset.id;
+              if (changed) {
+                /* service category changed — reset downstream picks so
+           chair + chronos re-evaluate against the new service */
+                state.time = null;
+              }
+              renderBookServices();
+              renderSummary();
+            }),
+        );
+      }
+      renderBookServices();
+
+      /* Step 2 — options/copy shift based on the selected service's category */
+      function renderPros() {
+        const svc = currentService();
+        const helper = document.getElementById("proHelper");
+        helper.textContent = svc
+          ? CATEGORY_COPY[svc.category] ||
+            "Pick who you'd like handling this session."
+          : "Pick a service first to see chair options.";
+
+        const g = document.getElementById("bookPros");
+        g.innerHTML = PROS.map(
+          (p) => `
+    <button data-id="${p.id}" class="pro glass rounded-2xl p-6 card-hover text-center ${state.pro === p.id ? "neon-border" : ""}">
+      <div class="mx-auto w-24 h-24 rounded-2xl grid place-items-center chrome-text font-display text-3xl" style="background:linear-gradient(135deg,#1c1c1c,#2a2a2a);">
+        ${p.code}
+      </div>
+      <div class="font-display text-lg chrome-text mt-4">${p.name}</div>
+      <div class="font-mono text-[10px] text-white/50 mt-1 flex items-center justify-center gap-2">
+        ${p.id !== "any" ? '<span class="live-dot"></span>' : ""} ${p.tag}
+      </div>
+    </button>
+  `,
+        ).join("");
+        g.querySelectorAll(".pro").forEach(
+          (el) =>
+            (el.onclick = () => {
+              state.pro = el.dataset.id;
+              renderPros();
+              renderSummary();
+            }),
+        );
+      }
+
+      /* Step 3 — longer services (combos / the Grooming Package) block out
+   more chair time, so fewer chronos slots are exposed as bookable. */
+      function slotStepFor(svc) {
+        if (!svc) return 1;
+        if (svc.minutes >= 90) return 3;
+        if (svc.minutes >= 60) return 2;
+        return 1;
+      }
+
+      function renderDays() {
+        const row = document.getElementById("dayRow");
+        row.innerHTML = DAYS.map(
+          (d, i) => `
+    <button data-i="${i}" class="daychip ${d.off ? "off" : ""} ${d.isToday ? "today" : ""} flex flex-col items-center gap-1 shrink-0">
+      <div class="daycircle w-14 h-14 rounded-full grid place-items-center font-display text-lg border ${state.dayIndex === i ? "bg-crimson text-white border-transparent" : "bg-white/5 hairline text-white/80"} ${d.off ? "opacity-40" : ""}">${d.dayNum}</div>
+      <div class="font-mono text-[10px] text-white/50">${d.label}</div>
+    </button>
+  `,
+        ).join("");
+        row.querySelectorAll(".daychip:not(.off)").forEach(
+          (el) =>
+            (el.onclick = () => {
+              state.dayIndex = +el.dataset.i;
+              state.time = null; // reset time when day changes
+              renderDays();
+              renderSlots();
+              renderSummary();
+            }),
+        );
+        const dayObj = currentDay();
+        const isWknd = isWeekendDayObj(dayObj);
+        const durHelper = document.getElementById("durHelper");
+        const svc = currentService();
+        const monthYear =
+          MONTH_NAMES[dayObj.month].toUpperCase() +
+          " · " +
+          dayObj.year +
+          " · BRAMPTON.LOCAL";
+        durHelper.textContent = svc
+          ? monthYear +
+            " — " +
+            svc.dur.toUpperCase() +
+            " SESSION · " +
+            (isWknd ? "9AM–8PM" : "9AM–1PM")
+          : monthYear + " · " + (isWknd ? "9AM–8PM" : "9AM–1PM");
+
+        document.getElementById("pickedDayLabel").textContent =
+          formatDateLong(dayObj);
+      }
+
+      function renderSlots() {
+        const svc = currentService();
+        const step = slotStepFor(svc);
+        const g = document.getElementById("slotGrid");
+        const dayObj = currentDay();
+        const slots = slotsForDayObj(dayObj);
+
+        /* If today, filter out slots that have already passed */
+        const now = new Date();
+        const nowMinutes = now.getHours() * 60 + now.getMinutes();
+        const isToday = dayObj.isToday;
+
+        /* If selected time no longer valid, clear it */
+        if (state.time && !slots.includes(state.time)) {
+          state.time = null;
+        }
+        if (state.time && isToday && slotToMinutes(state.time) < nowMinutes) {
+          state.time = null;
+        }
+
+        g.innerHTML = slots
+          .map((s, i) => {
+            const blockedByDuration = i % step !== 0;
+            const passedToday = isToday && slotToMinutes(s) < nowMinutes;
+            const off = blockedByDuration || passedToday;
+            return `
+    <button data-t="${s}" class="slot hairline rounded-xl px-3 py-4 font-display text-sm text-white/80 flex items-center gap-2 ${state.time === s ? "on" : ""} ${off ? "off" : ""}">
+      <span class="opacity-60">${s.includes("am") ? "☀" : "☾"}</span> ${s}
+    </button>
+  `;
+          })
+          .join("");
+        g.querySelectorAll(".slot:not(.off)").forEach(
+          (el) =>
+            (el.onclick = () => {
+              state.time = el.dataset.t;
+              renderSlots();
+              renderSummary();
+            }),
+        );
+      }
+
+      /* Step 4 */
+      function renderGuests() {
+        const g = document.getElementById("orderGuests");
+        const main = currentService();
+        const proObj = PROS.find((p) => p.id === state.pro);
+        const primary = `
+    <div class="flex items-center gap-4 bg-white/5 rounded-2xl p-4">
+      <div class="w-14 h-14 rounded-xl grid place-items-center bg-white/10 font-display chrome-text shrink-0">${proObj ? proObj.code : "—"}</div>
+      <div class="flex-1 min-w-0">
+        <div class="font-display chrome-text truncate">${proObj ? proObj.name : "—"}</div>
+        <div class="text-xs text-white/50 truncate">${main ? main.name : "No service"}</div>
+      </div>
+      <div class="font-display text-lg chrome-text shrink-0">$${main ? main.price : 0}</div>
+    </div>
+  `;
+        const extras = state.guests
+          .map(
+            (gd, idx) => `
+    <div class="flex items-center gap-4 bg-white/5 rounded-2xl p-4">
+      <div class="w-14 h-14 rounded-xl grid place-items-center bg-white/10 font-display chrome-text shrink-0">G${idx + 2}</div>
+      <div class="flex-1 min-w-0">
+        <div class="font-display chrome-text truncate">Guest ${idx + 2}</div>
+        <select data-i="${idx}" class="guest-sel bg-transparent text-xs text-white/60 mt-1 w-full max-w-full">
+          ${SERVICES.map((s) => `<option value="${s.id}" ${gd.service === s.id ? "selected" : ""}>${s.name} · $${s.price}</option>`).join("")}
+        </select>
+      </div>
+      <button data-r="${idx}" class="rm text-white/40 hover:text-crimson shrink-0">✕</button>
+    </div>
+  `,
+          )
+          .join("");
+        g.innerHTML = primary + extras;
+        g.querySelectorAll(".guest-sel").forEach(
+          (el) =>
+            (el.onchange = () => {
+              state.guests[+el.dataset.i].service = el.value;
+              renderGuests();
+              renderSummary();
+            }),
+        );
+        g.querySelectorAll(".rm").forEach(
+          (el) =>
+            (el.onclick = () => {
+              state.guests.splice(+el.dataset.r, 1);
+              renderGuests();
+              renderSummary();
+            }),
+        );
+      }
+      document.getElementById("addGuest").onclick = () => {
+        state.guests.push({ service: "haircut" });
+        renderGuests();
+        renderSummary();
+      };
+
+      /* ---------- Shared order-data builder (summary pane + WhatsApp/SMS) ---------- */
+      function buildOrderData() {
+        const main = currentService();
+        const proObj = PROS.find((p) => p.id === state.pro);
+        const items = [];
+        if (main) items.push({ label: main.name, price: main.price });
+        state.guests.forEach((gd, i) => {
+          const s = SERVICES.find((x) => x.id === gd.service);
+          if (s)
+            items.push({
+              label: "Guest " + (i + 2) + " · " + s.name,
+              price: s.price,
+            });
+        });
+        const total = items.reduce((a, b) => a + b.price, 0);
+        return { main, proObj, items, total };
+      }
+
+      /* Summary pane */
+      function renderSummary() {
+        const { proObj, items, total } = buildOrderData();
+        const lines = document.getElementById("summaryLines");
+        const dayObj = currentDay();
+        if (items.length === 0) {
+          lines.innerHTML = `<div class="text-white/40 text-sm">Your ledger is empty. Pick a service to begin.</div>`;
+        } else {
+          lines.innerHTML = items
+            .map(
+              (it) => `
+      <div class="flex justify-between items-center gap-3">
+        <div class="min-w-0">
+          <div class="font-display text-sm chrome-text truncate">${it.label}</div>
+          <div class="text-[11px] text-white/40 truncate">${proObj ? proObj.name : "—"}${state.time ? " · " + state.time : ""}${dayObj ? " · " + formatDateShort(dayObj) : ""}</div>
+        </div>
+        <div class="font-display chrome-text shrink-0">$${it.price}</div>
+      </div>
+    `,
+            )
+            .join("");
+        }
+        document.getElementById("summaryTotal").textContent = "$" + total;
+        document.getElementById("ledgerId").textContent = String(
+          1000 + Math.floor(Math.random() * 8999),
+        );
+      }
+      renderGuests();
+      renderSummary();
+
+      /* ---------- Direct booking → WhatsApp / SMS ---------- */
+      const WHATSAPP_NUMBER = "16476214671"; // no + or dashes, for wa.me
+      const SMS_NUMBER = "+16476214671";
+
+      function validateBookingFields() {
+        const nameEl = document.getElementById("custName");
+        const phoneEl = document.getElementById("custPhone");
+        const name = nameEl ? nameEl.value.trim() : "";
+        const phone = phoneEl ? phoneEl.value.trim() : "";
+
+        if (!state.service) {
+          setStep(1);
+          pulseWarn("Choose a service");
+          return null;
+        }
+        if (!state.pro) {
+          setStep(2);
+          pulseWarn("Choose a chair");
+          return null;
+        }
+        if (!state.time) {
+          setStep(3);
+          pulseWarn("Pick a time");
+          return null;
+        }
+        if (!name || !phone) {
+          setStep(4);
+          const btn = document.getElementById("confirmBtn");
+          const old = btn.textContent;
+          btn.textContent = "ENTER NAME & MOBILE";
+          btn.style.animation = "shake .4s";
+          setTimeout(() => {
+            btn.textContent = old;
+            btn.style.animation = "";
+          }, 1400);
+          if (nameEl && !name) nameEl.focus();
+          else if (phoneEl) phoneEl.focus();
+          return null;
+        }
+        return { name, phone };
+      }
+
+      function buildBookingMessage(name, phone) {
+        const notesEl = document.getElementById("custNotes");
+        const notes = notesEl ? notesEl.value.trim() : "";
+        const { proObj, items, total } = buildOrderData();
+        const dayObj = currentDay();
+        const dayLabel = formatDateLong(dayObj);
+
+        let msg = "Hello PB08 BLENDZ! I'd like to book an appointment.\n\n";
+        msg += "Name: " + name + "\n";
+        msg += "Phone: " + phone + "\n";
+        msg += "Chair: " + (proObj ? proObj.name : "—") + "\n";
+        msg += "Date: " + dayLabel + "\n";
+        msg += "Time: " + state.time + "\n\n";
+        msg += "Services:\n";
+        items.forEach((it) => {
+          msg += "- " + it.label + " ($" + it.price + ")\n";
+        });
+        msg += "\nTotal: $" + total + " CAD\n";
+        if (notes) msg += "\nNotes: " + notes + "\n";
+        return msg;
+      }
+
+      function confirmBooking() {
+        const fields = validateBookingFields();
+        if (!fields) return;
+
+        const msg = buildBookingMessage(fields.name, fields.phone);
+        const encoded = encodeURIComponent(msg);
+        const waUrl = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encoded;
+
+        const btn = document.getElementById("confirmBtn");
+        btn.textContent = "✓ OPENING WHATSAPP…";
+        btn.style.background = "linear-gradient(180deg,#00c47a,#00915a)";
+        setTimeout(() => {
+          btn.textContent = "CONFIRM & SEND TO WHATSAPP →";
+          btn.style.background = "";
+        }, 2600);
+
+        window.open(waUrl, "_blank");
+      }
+      document.getElementById("confirmBtn").onclick = confirmBooking;
+
+      document
+        .getElementById("smsFallback")
+        .addEventListener("click", (e) => {
+          e.preventDefault();
+          const fields = validateBookingFields();
+          if (!fields) return;
+          const msg = buildBookingMessage(fields.name, fields.phone);
+          const encoded = encodeURIComponent(msg);
+          window.location.href = "sms:" + SMS_NUMBER + "?body=" + encoded;
+        });
+
+      /* Elite pass cycle toggle (visual only) */
+      document.querySelectorAll(".cycle-btn").forEach(
+        (b) =>
+          (b.onclick = () => {
+            document.querySelectorAll(".cycle-btn").forEach((x) => {
+              x.classList.remove("active-cycle");
+              x.classList.add("text-white/60");
+              x.classList.remove("bg-white/10", "text-white");
+            });
+            b.classList.add("active-cycle");
+            b.classList.remove("text-white/60");
+            b.classList.add("bg-white/10", "text-white");
+          }),
+      );
+
+      /* Contact */
+      document.getElementById("contactForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        document.getElementById("contactOk").classList.remove("hidden");
+        e.target.reset();
+      });
+
+      /* Keyboard shortcuts */
+      document.addEventListener("keydown", (e) => {
+        if (e.target.matches("input,textarea,select")) return;
+        if (e.key === "b" || e.key === "B") go("book");
+        if (e.key === "m" || e.key === "M") go("menu");
+        if (e.key === "h" || e.key === "H") go("home");
+      });
+
+      /* Init hash routing */
+      if (location.hash) {
+        const v = location.hash.replace("#", "");
+        if (document.getElementById("view-" + v)) go(v);
+      }
+
+      /* Initial render for step-dependent booking panes */
+      renderPros();
+      renderDays();
+      renderSlots();
+
+      /* Live open/closed status based on business hours */
+      applyOpenStatus();
+    </script>
+  </body>
+</html>
