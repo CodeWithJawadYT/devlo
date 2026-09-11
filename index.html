@@ -387,6 +387,31 @@
         opacity: 0.35;
         pointer-events: none;
       }
+      .slot.taken {
+        opacity: 0.55;
+        pointer-events: none;
+        background: repeating-linear-gradient(
+          135deg,
+          rgba(255, 0, 60, 0.08) 0 6px,
+          rgba(255, 255, 255, 0.02) 6px 12px
+        );
+        border-color: rgba(255, 0, 60, 0.45);
+        color: rgba(255, 255, 255, 0.45);
+        text-decoration: line-through;
+      }
+      .slot-badge {
+        margin-left: auto;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 9px;
+        letter-spacing: 0.08em;
+        padding: 2px 6px;
+        border-radius: 999px;
+        background: rgba(255, 0, 60, 0.18);
+        border: 1px solid rgba(255, 0, 60, 0.5);
+        color: #ff2b5e;
+        text-decoration: none;
+        white-space: nowrap;
+      }
 
       /* Day chip */
       .daychip {
@@ -2044,6 +2069,84 @@
 
       const DAYS = generateDays(10);
 
+      /* ================= LOCAL BOOKING LEDGER =================
+   Confirmed bookings are persisted in LocalStorage so a chosen
+   date + time + chair can never be double-booked from this device.
+   Shape: { "2026-09-12|9:30am|bobby": { name, service, ts } } */
+      const BOOKINGS_KEY = "pb08_bookings_v1";
+
+      function dateKeyOf(dayObj) {
+        if (!dayObj) return "";
+        const m = String(dayObj.month + 1).padStart(2, "0");
+        const d = String(dayObj.dayNum).padStart(2, "0");
+        return dayObj.year + "-" + m + "-" + d;
+      }
+
+      function loadBookings() {
+        try {
+          const raw = localStorage.getItem(BOOKINGS_KEY);
+          const parsed = raw ? JSON.parse(raw) : {};
+          return parsed && typeof parsed === "object" ? parsed : {};
+        } catch (e) {
+          return {};
+        }
+      }
+
+      function saveBookings(map) {
+        try {
+          localStorage.setItem(BOOKINGS_KEY, JSON.stringify(map));
+        } catch (e) {
+          /* storage unavailable — booking still proceeds */
+        }
+      }
+
+      /* Drop bookings for dates that are already in the past */
+      function pruneBookings() {
+        const map = loadBookings();
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        let changed = false;
+        Object.keys(map).forEach((k) => {
+          const dk = k.split("|")[0];
+          const parts = dk.split("-");
+          if (parts.length !== 3) return;
+          const d = new Date(+parts[0], +parts[1] - 1, +parts[2]);
+          if (d < today) {
+            delete map[k];
+            changed = true;
+          }
+        });
+        if (changed) saveBookings(map);
+        return map;
+      }
+
+      function bookingKey(dayObj, time, proId) {
+        return dateKeyOf(dayObj) + "|" + time + "|" + (proId || "any");
+      }
+
+      function isSlotBooked(dayObj, time, proId) {
+        const map = loadBookings();
+        return !!map[bookingKey(dayObj, time, proId)];
+      }
+
+      function markSlotBooked(dayObj, time, proId, info) {
+        const map = loadBookings();
+        map[bookingKey(dayObj, time, proId)] = Object.assign(
+          { ts: Date.now() },
+          info || {},
+        );
+        saveBookings(map);
+      }
+
+      pruneBookings();
+
+      /* Keep slots in sync if another tab books something */
+      window.addEventListener("storage", (e) => {
+        if (e.key === BOOKINGS_KEY && document.getElementById("slotGrid")) {
+          renderSlots();
+        }
+      });
+
       function formatDateLong(dayObj) {
         if (!dayObj) return "";
         return (
@@ -2489,14 +2592,21 @@
           state.time = null;
         }
 
+        /* If the selected time got booked meanwhile, release it */
+        if (state.time && isSlotBooked(dayObj, state.time, state.pro)) {
+          state.time = null;
+        }
+
         g.innerHTML = slots
           .map((s, i) => {
             const blockedByDuration = i % step !== 0;
             const passedToday = isToday && slotToMinutes(s) < nowMinutes;
-            const off = blockedByDuration || passedToday;
+            const taken = isSlotBooked(dayObj, s, state.pro);
+            const off = blockedByDuration || passedToday || taken;
             return `
-    <button data-t="${s}" class="slot hairline rounded-xl px-3 py-4 font-display text-sm text-white/80 flex items-center gap-2 ${state.time === s ? "on" : ""} ${off ? "off" : ""}">
+    <button data-t="${s}" ${taken ? 'disabled aria-disabled="true"' : ""} class="slot hairline rounded-xl px-3 py-4 font-display text-sm text-white/80 flex items-center gap-2 ${state.time === s ? "on" : ""} ${off ? "off" : ""} ${taken ? "taken" : ""}">
       <span class="opacity-60">${s.includes("am") ? "☀" : "☾"}</span> ${s}
+      ${taken ? '<span class="slot-badge">RESERVED</span>' : ""}
     </button>
   `;
           })
@@ -2678,9 +2788,33 @@
         return msg;
       }
 
+      /* Persist the confirmed slot so it can never be picked again */
+      function commitSlot(name) {
+        const dayObj = currentDay();
+        const svc = currentService();
+        if (!dayObj || !state.time) return false;
+        if (isSlotBooked(dayObj, state.time, state.pro)) {
+          renderSlots();
+          setStep(3);
+          pulseWarn("That slot was just taken — pick another");
+          return false;
+        }
+        markSlotBooked(dayObj, state.time, state.pro, {
+          name: name,
+          service: svc ? svc.name : "",
+          pro: state.pro,
+          date: formatDateLong(dayObj),
+          time: state.time,
+        });
+        renderSlots();
+        renderSummary();
+        return true;
+      }
+
       function confirmBooking() {
         const fields = validateBookingFields();
         if (!fields) return;
+        if (!commitSlot(fields.name)) return;
 
         const msg = buildBookingMessage(fields.name, fields.phone);
         const encoded = encodeURIComponent(msg);
@@ -2705,6 +2839,7 @@
           const fields = validateBookingFields();
           if (!fields) return;
           const msg = buildBookingMessage(fields.name, fields.phone);
+          if (!commitSlot(fields.name)) return;
           const encoded = encodeURIComponent(msg);
           window.location.href = "sms:" + SMS_NUMBER + "?body=" + encoded;
         });
